@@ -1,0 +1,25 @@
+# Web framework
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.20
+
+# LangGraph + LangChain (let pip resolve compatible langchain-core)
+langgraph>=0.2.60
+langchain-openai>=0.2.14
+langchain-anthropic>=0.3.3
+langgraph-checkpoint-sqlite>=2.0.2
+
+# Database
+sqlalchemy>=2.0.36
+aiosqlite>=0.20.0
+
+# Validation
+pydantic>=2.10.0
+pydantic-settings>=2.7.0
+
+# HTTP client + feed parsing (veille agents)
+httpx>=0.28.0
+feedparser>=6.0.11
+
+# Utilities
+python-dotenv>=1.0.1
