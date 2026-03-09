@@ -1,5 +1,4 @@
 from pydantic_settings import BaseSettings
-from typing import Literal
 
 
 OPENAI_MODELS = {"gpt-4o", "gpt-4o-mini", "gpt-3.5-turbo"}
@@ -12,9 +11,9 @@ ALL_MODELS = OPENAI_MODELS | ANTHROPIC_MODELS
 
 
 class Settings(BaseSettings):
-    host: str = "127.0.0.1"
+    host: str = "0.0.0.0"
     port: int = 8080
-    cors_origins: list[str] = ["http://localhost:3000"]
+    cors_origins: list[str] = ["*"]
 
     database_url: str = "sqlite+aiosqlite:///./data/ai_factory.db"
     checkpoint_db_path: str = "./data/checkpoints.db"
